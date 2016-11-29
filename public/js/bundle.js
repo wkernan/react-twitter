@@ -1,0 +1,1 @@
+console.error("Error: Parsing file /Users/wkernan/Desktop/twitterReact/components/TweetsApp.react.js: Unexpected token (95:3)")
