@@ -2,7 +2,7 @@ var express = require('express');
 var exphbs = require('express-handlebars');
 var http = require('http');
 var mongoose = require('mongoose');
-var twitter = require('ntwitter');
+var twitter = require('twitter');
 var routes = require('./routes');
 var config = require('./config');
 var streamHandler = require('./utils/streamHandler');
@@ -31,6 +31,6 @@ var server = http.createServer(app).listen(port, function() {
 
 var io = require('socket.io').listen(server);
 
-twit.stream('statuses/filter',{ track: '#BlackFridayDeals'}, function(stream) {
+twit.stream('statuses/filter',{ track: 'BlackFridayDeals'}, function(stream) {
 	streamHandler(stream,io);
 });
